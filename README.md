@@ -21,6 +21,43 @@ Load and save task list to file
 The solution may also include other creative features at your discretion in case you wish to show some flair(but this will not affect the default evaluation -- see checklist).
 ### Tools
 - VS code
+### Class diagram
+
+```puml
+
+class Task {
+    String title
+    String dueDate
+    boolean status
+    getName()
+    getDate()
+    getStatus()
+}
+
+class toDoly {
+    list<Task>:ArrayList
+    sort()
+    addTask()
+    editTask()
+    deleteTask()
+    getTask()
+
+}
+
+class TaskFileManager {
+    saveFile()
+    openFile()
+}
+
+class ToDolyPrompt {
+    prompt()
+}
+
+toDoly o-- Task 
+toDoly <.. TaskFileManager 
+toDoly <.. ToDolyPrompt
+
+```
 
 ### License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/melvinmajor/TodoList/blob/master/LICENSE.md) file for details.
