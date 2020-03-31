@@ -23,7 +23,7 @@ The solution may also include other creative features at your discretion in case
 - VS code
 - Intellij IDEA
 ### Class diagram
-[image]:https://github.com/Feifei-Peng/IP-ToDoly/blob/master/figures/ip_class_diagram.png
+![image](https://github.com/Feifei-Peng/IP-ToDoly/blob/master/figures/ip_class_diagram.png)
 <!-- ```puml
 'skinparam classAttributeIconSize 0
 class Task {
