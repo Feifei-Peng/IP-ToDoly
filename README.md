@@ -21,9 +21,10 @@ Load and save task list to file
 The solution may also include other creative features at your discretion in case you wish to show some flair(but this will not affect the default evaluation -- see checklist).
 ### Tools
 - VS code
+- Intellij IDEA
 ### Class diagram
-
-```puml
+[image]:https://github.com/Feifei-Peng/IP-ToDoly/blob/master/figures/ip_class_diagram.png
+<!-- ```puml
 'skinparam classAttributeIconSize 0
 class Task {
     -String title
@@ -31,43 +32,57 @@ class Task {
     -String projectTitle
     -boolean isDone 
     +getTitle()
+    +setTitle()
     +getProjectTitle()
+    +setProjectTitle()
     +getDueDate()
-    +getisDone()
+    +setDueDate()
+    +isTaskDone()
+    +setTaskDone()
+    +toString()
 }
 
 class ToDoList {
     -ArrayList<Task> taskList
-    +sortToDueDate()
-    +sortToProject()
+    -fileName
+    +showTask()
+    +getNumberOfTasksDone()
+    +showTaskByDueDate()
+    +showTaskByProject()
     +addTask()
+    +editTask()
+    +updateTask()
     +markTaskDone()
-    +modifyTask()
     +removeTask()
-    +getNumberOfTaskDone()
-
+    +showTaskByIndex()
+    +write()
+    +load()
 }
 
-class TaskFileManager {
-    -File toDoly
-    +saveFile()
-    +loadFile()
+class CmdMenu {
+    -ArrayList<Task>
+    ~ToDoList
+    ~fileName
+    +showWelcome()
 }
 
-class CmdPrompt {
-    +prompt()
+class ToDolyApp {
+    ~fileName
+    ~ArrayList<Task>
+    ~ToDoList
+    
     
 }
 
 
-Task <.. TaskFileManager 
-Task <.. CmdPrompt
+Task <-- CmdMenu 
+Task <-- ToDolyApp
 ToDoList o-- Task 
-ToDoList <.. TaskFileManager
-ToDoList <.. CmdPrompt
+ToDoList <-- CmdMenu
+ToDoList <-- ToDolyApp
 
 
-```
+``` -->
 
 ### License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/melvinmajor/TodoList/blob/master/LICENSE.md) file for details.
