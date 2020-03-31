@@ -24,38 +24,48 @@ The solution may also include other creative features at your discretion in case
 ### Class diagram
 
 ```puml
-
+'skinparam classAttributeIconSize 0
 class Task {
-    String title
-    String dueDate
-    boolean status
-    getName()
-    getDate()
-    getStatus()
+    -String title
+    -String dueDate
+    -String projectTitle
+    -boolean isDone 
+    +getTitle()
+    +getProjectTitle()
+    +getDueDate()
+    +getisDone()
 }
 
-class toDoly {
-    list<Task>:ArrayList
-    sort()
-    addTask()
-    editTask()
-    deleteTask()
-    getTask()
+class ToDoList {
+    -ArrayList<Task> taskList
+    +sortToDueDate()
+    +sortToProject()
+    +addTask()
+    +markTaskDone()
+    +modifyTask()
+    +removeTask()
+    +getNumberOfTaskDone()
 
 }
 
 class TaskFileManager {
-    saveFile()
-    openFile()
+    -File toDoly
+    +saveFile()
+    +loadFile()
 }
 
-class ToDolyPrompt {
-    prompt()
+class CmdPrompt {
+    +prompt()
+    
 }
 
-toDoly o-- Task 
-toDoly <.. TaskFileManager 
-toDoly <.. ToDolyPrompt
+
+Task <.. TaskFileManager 
+Task <.. CmdPrompt
+ToDoList o-- Task 
+ToDoList <.. TaskFileManager
+ToDoList <.. CmdPrompt
+
 
 ```
 
