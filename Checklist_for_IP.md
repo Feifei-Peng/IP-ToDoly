@@ -11,19 +11,19 @@
 - ### Quality aspects	
   
   - #### Code Quality			
-  1. [ ] Clean and readable (e.g. good variable and method names)
-  2. [ ] Correct use of comments (e.g. expressing intent instead of repeating code)
+  1. [x] Clean and readable (e.g. good variable and method names)
+  2. [x] Correct use of comments (e.g. expressing intent instead of repeating code)
   3. [x] Good formatting (e.g. whitespace, semicolon and winged brackets looks good and follows a Java style guide)				
       			
 		
   - #### Unit Testing	
-  1. [ ] Presence of unit testing for the majority of the methods in at least 2 classes
-  2. [ ] Test methods are clearly expressed and follows the naming convention of Java Unit testing
+  1. [x] Presence of unit testing for the majority of the methods in at least 2 classes
+  2. [x] Test methods are clearly expressed and follows the naming convention of Java Unit testing
    
   - #### Use of Advanced Java features
-  1. [ ] Use of Generic classes (e.g. from Java Collections, such as Arraylist, HashMap etc.)
-  2. [ ] Use of Packages to organise code
-  3. [ ] Use of Streams to process elements in datastructures 
+  1. [x] Use of Generic classes (e.g. from Java Collections, such as Arraylist, HashMap etc.)
+  2. [x] Use of Packages to organise code
+  3. [x] Use of Streams to process elements in datastructures 
    
   - #### Use of software design best practice
   1. [ ] Evidence of design patterns patterns (e.g. factory, singleton, MVC etc)	
@@ -33,11 +33,11 @@
 - ### Project management
   - #### Use of version control
   1. [x] Repository on GitHub
-  2. [ ] Clear commit log messages	
-  3. [ ] Use of Branches
-  4. [ ] Pull Requests
+  2. [x] Clear commit log messages	
+  3. [x] Use of Branches
+  4. [x] Pull Requests
   - #### Use of issue tracker
-  1. [ ] Use of milestones for planning	
+  1. [x] Use of milestones for planning	
   2. [x] Use of issues for features and bug tracking	
 
 - ### General comment

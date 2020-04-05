@@ -6,38 +6,61 @@
 start
 repeat
 
-:promt; 
+:CmdMenu; 
 note right: print welcome information\n and commands
 if (choice == 1\nshow task lists) 
 
-:print: sort way, date?project?;
-:print: the tasks;
+
+:command propmt;
+if (choice == 1)
+:show task by dueDate;
+else if (choice == 2)
+:show task by project;
+else if (choice == 3)
+:back to CmdMenu;
+else 
+:print exception;
+endif
 
 
-else if (choice == 2\ncreate a new task) 
+else if (choice == 2\nAdd a new task) 
 
 :print: please input task title...;
 :input: task title,dueDate,project title;
 :print: task created ok;
 
 else if (choice == 3\nedit task)
+if (choice == 1)
+:update a task;
+:choose a task;
+:update dueDate,status,project title;
+else if (choice == 2)
+:markdone a task;
+:choose a task;
+:set task status true;
 
-:print: choose a task;
-:input: the task;
-:print: changed task;
+else if (choice == 3)
+:remove a task;
+:choose a task;
+:delete a task;
+else if (choice == 4)
+:back to CmdMenu;
+else 
+:print exception;
+endif
 
 
-else (choice == 4\nsave and quit)
 
-:print: save file?;
-:input: yes or abort;
-:print: folder to save;
+else if(choice == 4\nsave and quit)
+
+:Save the file;
 :print: sucess;
+
+else
 
 
 endif
 
-:print: input \\n to go back to welcome info;
 
 @enduml
 ```
